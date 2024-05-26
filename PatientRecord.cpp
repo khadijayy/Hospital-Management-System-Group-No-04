@@ -1,7 +1,7 @@
 #include "PatientRecord.h"
-// default constructor.
+
 Patient::Patient() : id(newId++), name(""), cnic(""), phoneNumber(""), disease(""), status("") {}
-// parameterized constructor.
+Patient::~Patient() {}
 Patient::Patient(string n, string c, string number, string d, string s) : id(newId++), disease(d), status(s)
 {
     setName(n);
@@ -68,3 +68,23 @@ string Patient::getCnic() const { return cnic; }
 string Patient::getPhoneNo() const { return phoneNumber; }
 string Patient::getStatus() const { return status; }
 string Patient::getDisease() const { return disease; }
+
+void Patient::readfromfile(ifstream &fin)
+{
+    fin >> id;
+    fin.ignore();
+    getline(fin, name);
+    getline(fin, cnic);
+    getline(fin, phoneNumber);
+    getline(fin, disease);
+    getline(fin, status);
+}
+void Patient::writeToFile(ofstream &fout)
+{
+    fout << id << endl;
+    fout << name << endl;
+    fout << cnic << endl;
+    fout << phoneNumber << endl;
+    fout << disease << endl;
+    fout << status << endl;
+}
