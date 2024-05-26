@@ -14,11 +14,11 @@ class Patient
     string cnic;
     string phoneNumber;
     string disease;
-    string status;  //admitted/discharged
+    string status; // admitted/discharged
 
 public:
     // default constructor.
-    Patient() ;
+    Patient();
     // parameterized constructor.
     Patient(string n, string c, string number, string d, string s);
     // getters/setters.
@@ -27,7 +27,12 @@ public:
     void setPhoneNumber(string phoneNumber);
     void setDisease(string disease);
     void setStatus(string status);
-    int getid() const ;
+    int getid() const;
+    string getName() const;
+    string getCnic() const;
+    string getPhoneNo() const;
+    string getStatus() const;
+    string getDisease() const;
     // display function.
     void display();
     // destructor.
