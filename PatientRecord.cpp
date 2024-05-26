@@ -2,19 +2,14 @@
 
 Patient::Patient() : id(newId++), name(""), cnic(""), phoneNumber(""), disease(""), status("") {}
 Patient::~Patient() {}
-Patient::Patient(string n, string c, string number, string d, string s) : id(newId++), disease(d), status(s)
+Patient::Patient(string n, string c, string number, string d, string s) : id(newId++), disease(d), status(s), name(n)
 {
-    setName(n);
     setcnic(c);
     setPhoneNumber(number);
 }
 void Patient::setName(string name)
 {
-    if (name.empty())
-    {
-        cout << "Name cant be empty" << endl;
-        return;
-    }
+
     this->name = name;
 }
 void Patient::setcnic(string cnic)
@@ -30,8 +25,7 @@ void Patient::setcnic(string cnic)
 
     if (cleaned_cnic.length() != 13)
     {
-        cout << "Incorrect CNIC" << endl;
-        return;
+        throw invalid_argument("Incorrect CNIC");
     }
 
     this->cnic = cleaned_cnic;
@@ -49,8 +43,7 @@ void Patient::setPhoneNumber(string phoneNumber)
 
     if (cleaned_phone.length() != 11)
     {
-        cout << "Incorrect Phone Number" << endl;
-        return;
+        throw invalid_argument("Incorrect Phone Number");
     }
     this->phoneNumber = phoneNumber;
 }
@@ -88,3 +81,15 @@ void Patient::writeToFile(ofstream &fout)
     fout << disease << endl;
     fout << status << endl;
 }
+
+void Patient::display()
+{
+    cout << "Patient Id: " << id << endl;
+    cout << "Patient Name: " << name << endl;
+    cout << "CNIC: " << cnic << endl;
+    cout << "Phone Number: " << phoneNumber << endl;
+    cout << "Disease: " << disease << endl;
+    cout << "Status: " << status << endl;
+}
+
+int Patient ::newId = 1;
