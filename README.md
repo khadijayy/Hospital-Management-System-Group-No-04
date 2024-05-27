@@ -9,10 +9,9 @@ The Patient Management System is a comprehensive software solution designed to f
 Quickly access patient records from the database using random access methods.
 2. **Write Patient Records:** Add new patient records to the database with ease, capturing all necessary patient details in a structured format.
 3. **Display Patient Records:** Present patient information in a clear and organized manner, allowing healthcare providers to quickly view and assess patient data.
-4. **Display Patient Records:** Present patient information in a clear and organized manner, allowing healthcare providers to quickly view and assess patient data.
-5. **Update Patient Records:** Modify existing patient records to keep information up-to-date, including medical history, treatment plans, and personal details.
-6. **Search Patient Records:** Utilize advanced search functionalities to find specific patient records based on various criteria such as name, ID, or medical condition.
-7. **Delete Patient Records:** Remove patient records from the database securely when they are no longer needed, ensuring compliance with data retention policies.
+4. **Update Patient Records:** Modify existing patient records to keep information up-to-date, including medical history, treatment plans, and personal details.
+5. **Search Patient Records:** Utilize advanced search functionalities to find specific patient records based on various criteria such as name, ID, or medical condition.
+6. **Delete Patient Records:** Remove patient records from the database securely when they are no longer needed, ensuring compliance with data retention policies.
 
 ## Contributors
 Contributions are create wonders!
